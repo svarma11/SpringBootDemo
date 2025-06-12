@@ -1,0 +1,28 @@
+### Maven ###
+/target/
+*.jar
+*.war
+*.ear
+
+### IntelliJ IDEA ###
+/target/
+.idea/
+*.iml
+*.iws
+out/
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Logs and temp files ###
+*.log
+*.tmp
+*.swp
+
+### VSCode (if used) ###
+.vscode/
+
+### Environment and local config ###
+.env
+*.local
