@@ -21,7 +21,11 @@ public class TimesheetServiceImpl implements TimesheetService {
     private TimesheetMapper timesheetMapper;
     @Override
     public TimesheetDto createTimesheet(TimesheetDto timesheetDto) {
-        Timesheet savedTimeSheet =  timesheetRepository.save(timesheetMapper.toEntity(timesheetDto));
+        User user = userRepository.findById(timesheetDto.getContractorId())
+                .orElseThrow(() -> new RuntimeException("Contarctor is not found"));
+        Timesheet timesheet = timesheetMapper.toEntity(timesheetDto);
+        timesheet.setContractor(user);
+        Timesheet savedTimeSheet =  timesheetRepository.save(timesheet);
         return timesheetMapper.toDto(savedTimeSheet);
     }
 

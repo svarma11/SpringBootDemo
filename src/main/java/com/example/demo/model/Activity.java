@@ -19,12 +19,12 @@ public class Activity {
     @Column(unique = true, nullable = false)
     private String activityCode;
     
-    @Column(nullable = false)
+    @Column
     private String activityName;
     
     @Column
     private String description;
     
-    @Column(nullable = false)
+    @Column
     private boolean active = true;
 } 

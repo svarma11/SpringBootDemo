@@ -23,7 +23,7 @@ public class Timesheet {
     @JoinColumn(name = "contractor_id", nullable = false)
     private User contractor;
 
-    @Column(nullable = false)
+    @Column
     private LocalDate weekStartDate;
     
     @Enumerated(EnumType.STRING)
@@ -42,4 +42,4 @@ public class Timesheet {
     
     @OneToMany(mappedBy = "timesheet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TimesheetEntry> entries;
-} 
+}

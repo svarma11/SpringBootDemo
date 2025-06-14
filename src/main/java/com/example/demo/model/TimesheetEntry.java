@@ -28,10 +28,10 @@ public class TimesheetEntry {
     @JoinColumn(name = "activity_id", nullable = false)
     private Activity activity;
     
-    @Column(nullable = false)
+    @Column
     private LocalDate date;
     
-    @Column(nullable = false)
+    @Column
     private Double hoursWorked;
     
     @Column

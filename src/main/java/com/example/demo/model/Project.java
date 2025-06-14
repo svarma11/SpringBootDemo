@@ -20,10 +20,10 @@ public class Project {
     @Column(unique = true, nullable = false)
     private String projectCode;
     
-    @Column(nullable = false)
+    @Column
     private String name;
     
-    @Column(nullable = false)
+    @Column
     private String client;
     
     @Enumerated(EnumType.STRING)

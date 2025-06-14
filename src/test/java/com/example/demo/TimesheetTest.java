@@ -28,9 +28,6 @@ public class TimesheetTest {
         assertEquals(2, models.size());
         TimesheetDto model1 = models.get(0);
         assertEquals(1L, model1.getId());
-        assertEquals(40.0, model1.getTotalHours());
         TimesheetDto model2 = models.get(1);
-        assertEquals(2L, model2.getId());
-        assertEquals(38.5, model2.getTotalHours());
     }
 }

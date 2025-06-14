@@ -17,7 +17,7 @@ public class TimesheetController {
     
     @PostMapping
     public ResponseEntity<TimesheetDto> createTimesheet(
-            @RequestParam Long contractorId,@RequestBody TimesheetDto timesheetDto) {
+            @RequestBody TimesheetDto timesheetDto) {
         try {
             TimesheetDto timesheet = timesheetService.createTimesheet(timesheetDto);
             return ResponseEntity.ok(timesheet);
