@@ -12,10 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TimesheetDto {
-    
     private Long id;
     private Long contractorId;
-    private String contractorName;
     private LocalDate weekStartDate;
     private TimesheetStatus status;
     private String managerComment;
