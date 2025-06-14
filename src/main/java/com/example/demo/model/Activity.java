@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "activities")
@@ -27,4 +31,11 @@ public class Activity {
     
     @Column
     private boolean active = true;
+
+    @Column
+    @CreationTimestamp
+    private Timestamp createdAt;
+    @Column
+    @UpdateTimestamp
+    private Timestamp updateAt;
 } 

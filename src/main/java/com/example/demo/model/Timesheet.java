@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -36,10 +40,17 @@ public class Timesheet {
     @ManyToOne
     @JoinColumn(name = "reviewed_by")
     private User reviewedBy;
-    
+
     @Column
     private LocalDate reviewedDate;
     
     @OneToMany(mappedBy = "timesheet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TimesheetEntry> entries;
+    @Column
+    @CreationTimestamp
+    private Timestamp createdAt;
+    @Column
+    @UpdateTimestamp
+    private Timestamp updateAt;
+
 }

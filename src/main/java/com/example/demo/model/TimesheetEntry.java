@@ -3,6 +3,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+
+import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @Entity
@@ -36,4 +38,9 @@ public class TimesheetEntry {
     
     @Column
     private String comments;
+
+    @Column
+    private Timestamp createdAt;
+    @Column
+    private Timestamp updateAt;
 } 
