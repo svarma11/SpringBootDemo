@@ -36,13 +36,6 @@ public class Timesheet {
     
     @Column
     private String managerComment;
-
-    @ManyToOne
-    @JoinColumn(name = "reviewed_by")
-    private User reviewedBy;
-
-    @Column
-    private LocalDate reviewedDate;
     
     @OneToMany(mappedBy = "timesheet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TimesheetEntry> entries;

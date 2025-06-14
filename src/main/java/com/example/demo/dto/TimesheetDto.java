@@ -17,8 +17,6 @@ public class TimesheetDto {
     private LocalDate weekStartDate;
     private TimesheetStatus status;
     private String managerComment;
-    private String reviewedByName;
-    private LocalDate reviewedDate;
     private List<TimesheetEntryDto> entries;
     private Double totalHours;
 } 
